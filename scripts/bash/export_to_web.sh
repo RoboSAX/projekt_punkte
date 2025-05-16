@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # info
 echo ""
 echo "Export der Punkte"

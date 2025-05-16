@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # info
 echo ""
 echo "Backup & Check der Punkte"
@@ -42,7 +44,7 @@ echo "  a) cp $FILENAME_ODS ..."
 cp "$FILENAME_ODS" "${SUBDIR_BACKUP}${NOW}${FILENAME_ODS}"
 echo "  b) cp $FILENAME_PDF ..."
 cp "$FILENAME_PDF" "${SUBDIR_BACKUP}${NOW}${FILENAME_PDF}"
-echo "  c) cp $FILENAME_PDF ..."
+echo "  c) cp $FILENAME_SVG ..."
 cp "$FILENAME_SVG" "${SUBDIR_BACKUP}${NOW}${FILENAME_SVG}"
 
 echo ""
@@ -58,6 +60,7 @@ scp "$FILENAME_SVG" "${WEBSERVER}${NOW}${FILENAME_SVG}"
 
 
 echo ""
-echo "3. Prüfe Ergebnis"
+echo "4. Prüfe Ergebnis"
 echo "  ristretto ${FILENAME_SVG}"
 ristretto "${FILENAME_SVG}"
+
